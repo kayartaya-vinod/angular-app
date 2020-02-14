@@ -1,0 +1,18 @@
+<p>Pipe to convert a date string into an age expression</p>
+
+<!-- dob = '1974-01-20'; -->
+
+<!-- only years -->
+<p>{{ dob | age }}</p> 
+
+<!-- only years -->
+<p>{{ dob | age : 1 }}</p> 
+
+<!-- years and months -->
+<p>{{ dob | age : 2 }}</p>
+
+<!-- years, months and days -->
+<p>{{ dob | age : 3 }}</p>
+
+<!-- only years -->
+<p>{{ dob | age : 22 }}</p>

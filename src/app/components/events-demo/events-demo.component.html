@@ -1,1 +1,8 @@
-<p>events-demo works!</p>
+<h2>Events Demo</h2>
+
+<div>
+    <app-contact-card
+        (remove)="removeContact($event)"
+        *ngFor="let c of contacts"
+        [contact]="c" ></app-contact-card>
+</div>

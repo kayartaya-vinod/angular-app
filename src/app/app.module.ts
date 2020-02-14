@@ -14,6 +14,7 @@ import { AgePipeDemoComponent } from './components/pipes-demo/age-pipe-demo/age-
 import { FilterPipeDemoComponent } from './components/pipes-demo/filter-pipe-demo/filter-pipe-demo.component';
 import { AgePipe } from './pipes/age.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
+import { ContactCardComponent } from './components/events-demo/contact-card/contact-card.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     FilterPipeDemoComponent,
     AgePipe,
     FilterPipe,
+    ContactCardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -10,6 +13,7 @@ import { EventsDemoComponent } from './components/events-demo/events-demo.compon
 import { AgePipeDemoComponent } from './components/pipes-demo/age-pipe-demo/age-pipe-demo.component';
 import { FilterPipeDemoComponent } from './components/pipes-demo/filter-pipe-demo/filter-pipe-demo.component';
 import { AgePipe } from './pipes/age.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,10 +25,13 @@ import { AgePipe } from './pipes/age.pipe';
     AgePipeDemoComponent,
     FilterPipeDemoComponent,
     AgePipe,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

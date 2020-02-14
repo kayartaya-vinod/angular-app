@@ -1,1 +1,28 @@
-<p>filter-pipe-demo works!</p>
+<h3>Contacts: </h3>
+
+<input type="text" class="form-control" [(ngModel)]="searchTerm">
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Sl no.</th>
+            <th>Gender</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of (contacts | filter : searchTerm : ['fname', 'lname']); index as i ">
+            <td>{{ i+1 }}</td>
+            <td>{{ c.gender }}</td>
+            <td>{{ c.fname }}</td>
+            <td>{{ c.lname }}</td>
+            <td>{{ c.email }}</td>
+            <td>{{ c.phone }}</td>
+            <td>{{ c.city }}</td>
+        </tr>
+    </tbody>
+</table>

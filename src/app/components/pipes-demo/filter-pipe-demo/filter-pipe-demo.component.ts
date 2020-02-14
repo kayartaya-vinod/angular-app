@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-filter-pipe-demo',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterPipeDemoComponent implements OnInit {
 
-  constructor() { }
+  searchTerm: string;
+  contacts: any = [];
+
+  constructor(private hc: HttpClient) { }
 
   ngOnInit(): void {
+    this.hc.get('/assets/contacts.json')
+      .subscribe(data => this.contacts = data)
   }
 
 }
